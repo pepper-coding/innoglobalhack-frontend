@@ -5,6 +5,7 @@ import UserList from "@/widgets/UserList/ui/UserList";
 import { Row, Col, Typography, Tooltip, Button } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import CustomFooter from "@/widgets/CustomFooter/ui/CustomFooter";
 
 const { Title } = Typography;
 
@@ -18,7 +19,7 @@ const MainPage = memo(() => {
         <Tooltip title="Админ панель">
           <Button
             type="text"
-            icon={<UserOutlined style={{ fontSize: "24px", color: "#FFFFFF" }} />}  // Используем UserOutlined
+            icon={<UserOutlined style={{ fontSize: "24px", color: "#FFFFFF" }} />} 
             onClick={() => navigate("/adminpanel")}
             style={{
               position: "absolute",
@@ -33,7 +34,7 @@ const MainPage = memo(() => {
           <Title
             level={1}
             style={{
-              background: "linear-gradient(90deg, orange, green)",
+              background: "linear-gradient(90deg, #008cff, #e0201a)",
               backgroundSize: "200% auto",
               animation: "gradient 5s ease infinite",
               WebkitBackgroundClip: "text",
@@ -44,6 +45,7 @@ const MainPage = memo(() => {
             {t("HR Helper")}
           </Title>
           <UserList />
+          <CustomFooter/>
         </Page>
       </Col>
 

@@ -15,7 +15,7 @@ const UserList: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(() => {
     return localStorage.getItem("tooltipShown") !== "true";
   });
-  const pageSize = 15;
+  const pageSize = 12;
 
   const { data: reviews, isLoading: isReviewsLoading } = useGetUserReviewsQuery(Array.from(selectedIds), {
     skip: !isModalVisible || selectedIds.size === 0,
